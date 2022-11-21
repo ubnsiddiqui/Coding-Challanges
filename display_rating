@@ -1,0 +1,22 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+import math
+def display_rating(inp):
+    flt = inp
+    ful = math.floor(flt)
+    lst = []
+    emp = 5 - math.ceil(flt)
+    half = (5- (ful+emp))
+    for i in range(5):
+        if ful > 0 & len(lst) <= 5:
+            lst.append('Full')
+            ful = ful - 1
+        elif half > 0 & len(lst) <= 5:
+            lst.append('Half')
+            half = half - 1
+        elif emp > 0 & len(lst) <= 5:
+            lst.append('Empty')
+            emp = emp - 1
+    rating = ' '.join([str(item) for item in lst])
+    print(rating)
+display_rating(2.25)
